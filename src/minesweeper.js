@@ -33,7 +33,7 @@ class Board {
   }
 
   flipTile(rowIndex, columnIndex) {
-    if ( this._playerBoard[rowIndex][columnIndex] !== '-' ) {
+    if ( this._playerBoard[rowIndex][columnIndex] !== '.' ) {
       console.log('This tile has already been flipped!');
       return
     } else if ( this._bombBoard[rowIndex][columnIndex] === 'B' ) {
@@ -75,7 +75,7 @@ class Board {
     for (let rowNumber = 0; rowNumber < numberOfRows; rowNumber++) {
       let row = []
       for (let colNumber = 0; colNumber < numberOfColumns; colNumber++) {
-        row.push('-')
+        row.push('.')
       }
       board.push(row);
     }
@@ -88,7 +88,7 @@ class Board {
     for (let rowNumber = 0; rowNumber < numberOfRows; rowNumber++) {
       let row = []
       for (let colNumber = 0; colNumber < numberOfColumns; colNumber++) {
-        row.push('-')
+        row.push('.')
       }
       board.push(row);
     }
@@ -107,7 +107,7 @@ class Board {
   }
 }
 
-const g = new Game(6, 6, 3);
+const g = new Game(6, 6, 6);
 g.playMove(0, 0);
 g.playMove(1, 1);
 g.playMove(2, 2);
